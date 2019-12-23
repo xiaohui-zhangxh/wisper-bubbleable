@@ -9,3 +9,5 @@ gem 'rake', '~> 12.0'
 gem 'rspec', '~> 3.0'
 
 gem 'simplecov', '~> 0.17.1'
+
+gem "pry", "~> 0.12.2"

@@ -5,10 +5,13 @@ class CoffeeStatePublisher
   include Wisper::Bubbleable
 
   def change(state)
-    if state == true
+    case state
+    when true
       broadcast(:power_on, 'Power On')
-    elsif state == false
+    when false
       broadcast(:power_off, 'Power Off')
+    when :backdoor
+      broadcast(:backdoor, 'Hacker comes!')
     else
       broadcast(:invalid_state, state)
     end
